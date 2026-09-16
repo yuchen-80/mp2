@@ -81,6 +81,7 @@
   border: 1px solid #cbd2d9;
   border-radius: 6px;
   background-color: #fff;
+  color: #1c1f23;
   font-size: 0.95rem;
   cursor: pointer;
 }
@@ -90,7 +91,7 @@
 }
 
 .navButton:disabled {
-  opacity: 0.4;
+  color: #a3abb3;
   cursor: not-allowed;
 }
 
