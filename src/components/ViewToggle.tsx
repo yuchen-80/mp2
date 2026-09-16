@@ -7,7 +7,7 @@ export default function ViewToggle() {
 
   return (
     <div className={styles.toggle}>
-      <NavLink to="/list" className={linkClass}>
+      <NavLink to="/" className={linkClass} end>
         List
       </NavLink>
       <NavLink to="/gallery" className={linkClass}>
