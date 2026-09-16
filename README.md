@@ -7,13 +7,13 @@
 > TypeScript peer range caps at `^4`, so `--template typescript` no longer resolves cleanly against
 > current React/TypeScript. Please walk the whole flow once before release and confirm:
 >
-> 1. `npm create vite@latest . -- --template react-ts` in a fresh clone, choosing "Ignore files and continue"
-> 2. `npm install` then `npm run dev` serves on **5173** (was 3000 under CRA)
-> 3. `npm run build` emits **`dist/`** (was `build/`) and `.github/workflows/deploy.yml` uploads that path
-> 4. The deployed site loads its JS/CSS -- this is what `base` in `vite.config.ts` controls; a wrong
+> 1. [WARNING]: this will overwrite the existing readme file]`npm create vite@latest . -- --template react-ts` in a fresh clone, choosing "Ignore files and continue"
+> 2. [CONFIRMED]`npm install` then `npm run dev` serves on **5173** (was 3000 under CRA)
+> 3. [CONFIRMED]`npm run build` emits **`dist/`** (was `build/`) and `.github/workflows/deploy.yml` uploads that path
+> 4. [CONFIRMED]The deployed site loads its JS/CSS -- this is what `base` in `vite.config.ts` controls; a wrong
 >    `base` yields a blank page with 404s on assets, not a build failure
 > 5. Client-side routes still resolve under the `/mp2/` subpath
-> 6. The autograder / grading scripts don't assume a CRA layout (`src/App.js`, `build/`, `PUBLIC_URL`)
+> 6. [N/A]The autograder / grading scripts don't assume a CRA layout (`src/App.js`, `build/`, `PUBLIC_URL`)
 
 ## Table of Contents
 

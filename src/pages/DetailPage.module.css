@@ -1,0 +1,105 @@
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #01b4e4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.poster {
+  width: 260px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.posterFallback {
+  width: 260px;
+  height: 390px;
+  border-radius: 8px;
+  background-color: #e3e6e8;
+  color: #6b7580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+
+.tagline {
+  font-style: italic;
+  color: #6b7580;
+  margin: 0 0 1rem;
+}
+
+.metaList {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.overview {
+  line-height: 1.5;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.navButton {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.navButton:hover:not(:disabled) {
+  border-color: #01b4e4;
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.status {
+  padding: 1.5rem;
+  color: #6b7580;
+}
+
+.statusError {
+  padding: 1.5rem;
+  color: #c0392b;
+}
