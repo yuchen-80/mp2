@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import PosterTile from '../components/PosterTile'
+import ViewToggle from '../components/ViewToggle'
 import { useMovies } from '../context/MoviesContext'
 import styles from './GalleryPage.module.css'
 
@@ -25,7 +26,10 @@ export default function GalleryPage() {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.heading}>Movie Gallery</h1>
+      <div className={styles.headingRow}>
+        <h1 className={styles.heading}>Movie Gallery</h1>
+        <ViewToggle />
+      </div>
 
       <fieldset className={styles.genreFilter}>
         <legend>Filter by genre</legend>

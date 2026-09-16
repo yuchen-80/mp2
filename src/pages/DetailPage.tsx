@@ -60,7 +60,7 @@ export default function DetailPage() {
 
   return (
     <div className={styles.page}>
-      <Link to="/" className={styles.back}>
+      <Link to="/list" className={styles.back}>
         ← Back
       </Link>
 

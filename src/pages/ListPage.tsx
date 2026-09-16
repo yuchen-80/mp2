@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import MovieRow from '../components/MovieRow'
+import ViewToggle from '../components/ViewToggle'
 import { useMovies } from '../context/MoviesContext'
 import type { SortDirection, SortKey } from '../types'
 import styles from './ListPage.module.css'
@@ -39,7 +40,10 @@ export default function ListPage() {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.heading}>Popular Movies</h1>
+      <div className={styles.headingRow}>
+        <h1 className={styles.heading}>Popular Movies</h1>
+        <ViewToggle />
+      </div>
 
       <div className={styles.controls}>
         <input

@@ -1,7 +1,9 @@
 import axios from 'axios'
 import type { Genre, Movie, MovieDetails } from '../types'
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY
+// Falls back to a hardcoded key when VITE_TMDB_API_KEY isn't set (e.g. no
+// GitHub Actions secret configured), so the deployed build still works.
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY || '5fac2cb5a2487995205a19befb7e0482'
 
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p'
 

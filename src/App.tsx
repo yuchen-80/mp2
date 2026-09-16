@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import { MoviesProvider } from './context/MoviesContext'
 import DetailPage from './pages/DetailPage'
@@ -11,7 +11,8 @@ function App() {
       <MoviesProvider>
         <Navbar />
         <Routes>
-          <Route path="/" element={<ListPage />} />
+          <Route path="/" element={<Navigate to="/list" replace />} />
+          <Route path="/list" element={<ListPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/movie/:id" element={<DetailPage />} />
         </Routes>
