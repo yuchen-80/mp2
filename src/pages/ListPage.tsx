@@ -69,13 +69,26 @@ export default function ListPage() {
           </select>
         </label>
 
-        <button
-          type="button"
-          className={styles.direction}
-          onClick={() => setDirection((d) => (d === 'asc' ? 'desc' : 'asc'))}
-        >
-          {direction === 'asc' ? 'Ascending ↑' : 'Descending ↓'}
-        </button>
+        <div className={styles.directionGroup} role="group" aria-label="Sort direction">
+          <button
+            type="button"
+            className={
+              direction === 'asc' ? `${styles.directionOption} ${styles.directionActive}` : styles.directionOption
+            }
+            onClick={() => setDirection('asc')}
+          >
+            Ascending
+          </button>
+          <button
+            type="button"
+            className={
+              direction === 'desc' ? `${styles.directionOption} ${styles.directionActive}` : styles.directionOption
+            }
+            onClick={() => setDirection('desc')}
+          >
+            Descending
+          </button>
+        </div>
       </div>
 
       {loading && <p className={styles.status}>Loading movies…</p>}

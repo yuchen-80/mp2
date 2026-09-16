@@ -49,17 +49,37 @@
   font-size: 0.9rem;
 }
 
-.direction {
-  padding: 0.45rem 0.8rem;
+.directionGroup {
+  display: inline-flex;
   border: 1px solid #cbd2d9;
   border-radius: 6px;
+  overflow: hidden;
+}
+
+.directionOption {
+  padding: 0.45rem 0.8rem;
+  border: none;
   background-color: #fff;
   cursor: pointer;
   font-size: 0.9rem;
+  color: #3a4149;
 }
 
-.direction:hover {
-  border-color: #01b4e4;
+.directionOption:not(:first-child) {
+  border-left: 1px solid #cbd2d9;
+}
+
+.directionOption:hover {
+  background-color: #f4f5f6;
+}
+
+.directionActive {
+  background-color: #01b4e4;
+  color: #ffffff;
+}
+
+.directionActive:hover {
+  background-color: #01b4e4;
 }
 
 .list {

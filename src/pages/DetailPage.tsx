@@ -61,7 +61,7 @@ export default function DetailPage() {
   return (
     <div className={styles.page}>
       <Link to="/list" className={styles.back}>
-        ← Back
+        Back
       </Link>
 
       <div className={styles.content}>
@@ -102,7 +102,7 @@ export default function DetailPage() {
           disabled={prevId === null}
           className={styles.navButton}
         >
-          ← Previous
+          Previous
         </button>
         <button
           type="button"
@@ -110,7 +110,7 @@ export default function DetailPage() {
           disabled={nextId === null}
           className={styles.navButton}
         >
-          Next →
+          Next
         </button>
       </div>
     </div>
